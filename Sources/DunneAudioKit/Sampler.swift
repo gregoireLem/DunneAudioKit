@@ -460,7 +460,7 @@ public class Sampler: Node {
         self.loadSFZ(path: sfzPath, fileName: sfzFileName)
     }
 
-    internal func loadAudioFile(from sampleDescriptor: SampleDescriptor, file: AVAudioFile) {
+    public func loadAudioFile(from sampleDescriptor: SampleDescriptor, file: AVAudioFile) {
         guard let floatChannelData = file.toFloatChannelData() else { return }
 
         let sampleRate = Float(file.fileFormat.sampleRate)
